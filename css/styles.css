@@ -1,11 +1,46 @@
-.grid {
+.grid-container {
   display: grid;
-  grid-template-columns: 3;
-  grid-gap: 20px;
-  align-items: stretch;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
 }
-.grid img {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-  max-width: 100%;
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.entry {
+  position: relative;
+}
+
+.image {
+  line-height: 0;
+}
+
+.image-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(90, 0, 10, 0.4);
+
+  /* typographic styles */
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+
+  /* position the text centrally*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* hide the title by default */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.entry:hover .image-title {
+  opacity: 1;
 }
