@@ -4,6 +4,30 @@
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    ". . ."
-    ". . .";
+    "area1 area2 area3"
+    "area4 area5 area6";
+}
+
+.area1 {
+  grid-area: area1;
+}
+
+.area2 {
+  grid-area: area2;
+}
+
+.area3 {
+  grid-area: area3;
+}
+
+.area4 {
+  grid-area: area4;
+}
+
+.area5 {
+  grid-area: area5;
+}
+
+.area6 {
+  grid-area: area6;
 }
